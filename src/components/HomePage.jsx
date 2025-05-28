@@ -1,6 +1,8 @@
 import styles from "./HomePage.module.css";
 import HeroImage from "../assets/hero-image.png";
 import { Projects } from "../utils/Projects";
+import ProjectCard from "./ProjectCard";
+import Contact from "./Contact";
 
 const HomePage = () => {
   return (
@@ -77,41 +79,10 @@ const HomePage = () => {
       {/* Featured Projects */}
       <section className={`container py-5 ${styles.projects}`}>
         <h2 className="text-center mb-5">Featured Projects</h2>
-        <div className="row g-4">
-          {Projects.map((project, i) => {
-            return (
-              <div key={`project-${i}`} className="col-md-6 mb-4">
-                <div className="card h-100">
-                  <div className="card-body">
-                    <h5 className="card-title">{project.title}</h5>
-                    <div className="d-flex flex-wrap justify-content-center gap-2 mt-3">
-                      {project.tech.map((t) => {
-                        return (
-                          <span
-                            key={`${t}-${i}`}
-                            className="badge bg-secondary"
-                          >
-                            {t}
-                          </span>
-                        );
-                      })}
-                    </div>
-                    <p className="card-text">{project.text}</p>
-                    {project.buttons.map((button, j) => (
-                      <a
-                        key={`button-${i}-${j}`}
-                        href={button.link}
-                        target="_blank"
-                        className="btn btn-sm btn-primary"
-                      >
-                        {button.text}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+        <div className="row g-4 justify-content-center">
+          {Projects.map((project, i) => (
+            <ProjectCard key={`project=${i}`} project={project} />
+          ))}
         </div>
       </section>
 
@@ -128,6 +99,7 @@ const HomePage = () => {
         >
           Contact Me
         </a>
+        <Contact />
       </section>
 
       {/* Footer */}
