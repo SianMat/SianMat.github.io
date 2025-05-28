@@ -1,0 +1,51 @@
+:root {
+  --bs-primary: #e85aa0;
+  --bs-primary-rgb: 232, 90, 160;
+
+  --pink-main: #e85aa0;
+  --pink-light: #fcd6e8;
+  --pink-dark: #d14288;
+  --text-dark: #2e2e2e;
+  --text-light: #ffffff;
+  --background-light: #fff8fb;
+  --background-dark: #1e1e1e;
+}
+body {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+a {
+  color: var(--pink-dark);
+}
+a:hover {
+  color: var(--pink-main);
+}
+
+.btn {
+  margin: 0.8rem;
+}
+
+.btn-primary,
+.btn-outline-primary {
+  --bs-btn-bg: var(--pink-main);
+  --bs-btn-border-color: var(--pink-main);
+  --bs-btn-hover-bg: var(--pink-dark);
+  --bs-btn-hover-border-color: var(--pink-dark);
+  --bs-btn-active-bg: var(--pink-dark);
+  --bs-btn-active-border-color: var(--pink-dark);
+}
+
+.btn-outline-primary {
+  color: var(--pink-main);
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  color: white;
+}
+
+.badge {
+  /* background-color: var(--pink-light) !important;
+  color: var(--text-dark) !important; */
+  font-weight: normal;
+}
