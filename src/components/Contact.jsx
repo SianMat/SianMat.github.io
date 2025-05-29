@@ -21,12 +21,12 @@ function Contact() {
               </div>
             </div>
 
-            <div className="d-flex align-items-center mb-3">
+            {/* <div className="d-flex align-items-center mb-3">
               <a href={`tel:${myInfo.phone}`} className="text-accent fs-4 me-3">
                 <i className="fas fa-phone"></i>
               </a>
               <div>{myInfo.phone}</div>
-            </div>
+            </div> */}
           </div>
 
           <div
