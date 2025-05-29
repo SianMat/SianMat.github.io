@@ -2,9 +2,9 @@ import { myInfo } from "../utils/MyInfo";
 
 function Contact() {
   return (
-    <div className="row pt-4 g-4">
+    <div className="row pt-4 g-4 justify-content-center">
       {/* Contact Info Section */}
-      <aside className="col-12 col-lg-4 order-2 order-lg-1">
+      <aside className="col-12 col-lg-4 order-2 order-lg-1 justify-self-center">
         <div className="contact-info p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
           <div>
             <h5 className="text-accent mb-4">Contact Info</h5>
@@ -47,7 +47,7 @@ function Contact() {
       </aside>
 
       {/* Contact Form Section */}
-      <section className="col-12 col-lg-8 order-1 order-lg-2">
+      {/* <section className="col-12 col-lg-8 order-1 order-lg-2">
         <div className="bg-slate-100 text-slate-900 p-4 rounded-4 shadow-sm">
           <h2 className="mb-4 text-accent">Get in Touch</h2>
           <form>
@@ -104,7 +104,7 @@ function Contact() {
             </button>
           </form>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

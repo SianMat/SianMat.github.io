@@ -3,6 +3,7 @@ import HeroImage from "../assets/hero-image.png";
 import { Projects } from "../utils/Projects";
 import ProjectCard from "./ProjectCard";
 import Contact from "./Contact";
+import Resume from "./CV";
 
 const HomePage = () => {
   return (
@@ -19,13 +20,7 @@ const HomePage = () => {
               <a href="/projects" className="btn btn-primary btn-lg">
                 View My Projects
               </a>
-              <a
-                href="/cv.pdf"
-                className="btn btn-outline-primary btn-lg"
-                download
-              >
-                Download CV
-              </a>
+              <Resume />
             </div>
           </div>
 
@@ -93,12 +88,12 @@ const HomePage = () => {
           Want to collaborate, commission a design, or ask a question? I’d love
           to hear from you.
         </p>
-        <a
-          href="mailto:hello@dreamweavecreations.com"
+        {/* <a
+          href="mailto:sianmatthews.uk@outlook.com"
           className="btn btn-lg btn-primary"
         >
           Contact Me
-        </a>
+        </a> */}
         <Contact />
       </section>
 
