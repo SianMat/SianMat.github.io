@@ -1,6 +1,7 @@
 :root {
   --bs-primary: #e85aa0;
   --bs-primary-rgb: 232, 90, 160;
+  --bs-light-rgb: 255, 255, 255;
 
   --pink-main: #e85aa0;
   --pink-light: #fcd6e8;
@@ -13,6 +14,7 @@
 body {
   background-color: var(--background-light);
   color: var(--text-dark);
+  height: 100vh;
 }
 a {
   color: var(--pink-dark);
@@ -44,22 +46,10 @@ a:hover {
   color: white;
 }
 
-.card {
-  max-width: 350px;
+.bg-pink {
+  background-color: var(--background-light);
 }
 
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-
-.badge {
-  background-color: var(--pink-light) !important;
-  color: var(--text-dark) !important;
-  font-weight: normal;
-}
-
-.contact-info {
-  background-color: var(--pink-light) !important;
-  color: var(--text-dark) !important;
+.nav-link:hover {
+  color: var(--bs-primary);
 }
