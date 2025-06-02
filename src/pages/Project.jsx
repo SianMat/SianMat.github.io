@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { Projects } from "../utils/Projects";
 import UngroupTechList from "../utils/UngroupTechList";
 import BadgeList from "../components/BadgeList";
@@ -21,6 +21,19 @@ export default function Project() {
     const HeroImage = importImage(project.fileName, project.image);
     return (
       <div className={`container py-5 projects`}>
+        <nav
+          style={{ "--bs-breadcrumb-divider": "'>'" }}
+          aria-label="breadcrumb"
+        >
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <Link to="/projects">Projects</Link>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              {projectTitle}
+            </li>
+          </ol>
+        </nav>
         <Hero
           title={projectTitle}
           lead={project.moreInfo || project.text}
