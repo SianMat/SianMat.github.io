@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router";
+import { Link, useParams } from "react-router-dom";
 import { Projects } from "../utils/Projects";
 import UngroupTechList from "../utils/UngroupTechList";
 import BadgeList from "../components/BadgeList";

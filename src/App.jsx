@@ -5,7 +5,7 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
-} from "react-router";
+} from "react-router-dom";
 import ProjectPage from "./pages/ProjectPage";
 import Root from "./pages/Root";
 import ContactPage from "./pages/ContactPage.";
