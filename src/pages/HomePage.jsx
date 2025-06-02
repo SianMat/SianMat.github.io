@@ -1,8 +1,7 @@
-import FeaturedProjectList from "../components/FeaturedProjectList";
+import FeaturedProjectList from "../components/HomePage/FeaturedProjectList.jsx";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import About from "../components/About";
-import Hero from "../components/Hero";
+import About from "../components/HomePage/About.jsx";
+import HomePageHero from "../components/HomePage/HomePageHero.jsx";
 
 // TODO - REDUCE THE SIZE OF IMAGES
 
@@ -10,7 +9,7 @@ const HomePage = () => {
   return (
     <>
       {/* Hero Section */}
-      <Hero />
+      <HomePageHero />
       <About />
       {/* Featured Projects */}
       <FeaturedProjectList />

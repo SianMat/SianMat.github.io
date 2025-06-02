@@ -9,6 +9,7 @@ import {
 import ProjectPage from "./pages/ProjectPage";
 import Root from "./pages/Root";
 import ContactPage from "./pages/ContactPage.";
+import Project from "./pages/Project";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path="projects" element={<ProjectPage />} />
       <Route path="contact" element={<ContactPage />} />
+      <Route path="projects/:projectTitle" element={<Project />} />
     </Route>
   )
 );

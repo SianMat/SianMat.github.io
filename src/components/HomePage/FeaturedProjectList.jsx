@@ -1,10 +1,10 @@
-import { Projects } from "../utils/Projects";
-import ProjectCard from "./ProjectCard";
+import { Projects } from "../../utils/Projects";
+import ProjectCard from "../ProjectCard";
 
 export default function FeaturedProjectList() {
   const mainProject = Projects.find((p) => p.main);
   const featuredProjects = Projects.filter((p) => p.featured).slice(0, 4);
-  
+
   return (
     <section className={`container py-5 projects`}>
       <h2 className="text-center mb-5">Featured Projects</h2>
@@ -24,7 +24,7 @@ export default function FeaturedProjectList() {
           </div>
         </div>
         <div className="col-12 col-lg-6">
-          <div className="row d-flex justify-content-center">
+          <div className="row d-flex justify-content-center h-100">
             {featuredProjects.map((project, i) => (
               <div
                 className="col-12 col-md-6 mb-4 d-flex justify-content-center"

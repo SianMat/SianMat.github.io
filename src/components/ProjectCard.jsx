@@ -1,8 +1,11 @@
+import { Link } from "react-router";
 import BadgeList from "./BadgeList";
+import UngroupTechList from "../utils/UngroupTechList";
 
-const importImage = (name) => {
+const importImage = (fileName, name) => {
   try {
-    return new URL(`../assets/images/${name}`, import.meta.url).href;
+    return new URL(`../assets/images/${fileName}/${name}`, import.meta.url)
+      .href;
   } catch {
     return null;
   }
@@ -15,23 +18,14 @@ export default function ProjectCard({
   displayImage = true,
   displayText = true,
 }) {
-  const techList = [];
-  Object.entries(project.tech).forEach(([category, techs]) => {
-    techs.forEach((tech) => {
-      if (!techList.includes(tech)) {
-        techList.push(tech);
-      }
-    });
-  });
-  // Sort each category's techs alphabetically
-  techList.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+  const techList = UngroupTechList(project.tech);
 
   if (project) {
     return (
       <div className="card h-100" style={{ maxWidth: `${maxWidth}px` }}>
         {displayImage && project.image && (
           <img
-            src={importImage(project.image)}
+            src={importImage(project.fileName, project.image)}
             className="card-img-top border-bottom"
             alt={`${project.title} screenshot`}
             style={{ height: `${imageHeight}px` }}
@@ -54,6 +48,15 @@ export default function ProjectCard({
               {button.text}
             </a>
           ))}
+          {project.moreInfo && (
+            <Link
+              key={`button-more-info`}
+              to={`/projects/${project.title}`}
+              className="btn btn-sm btn-primary"
+            >
+              More Info
+            </Link>
+          )}
         </div>
       </div>
     );
